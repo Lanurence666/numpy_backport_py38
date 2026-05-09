@@ -1,0 +1,1291 @@
+PS E:\AI_FUWANGGEZHANG\GPT-SoVITS-v4-for-win7\runtime> python.exe E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\fix_py38_python.py
+Python 3.8 兼容性修复脚本 - Python 源码部分
+============================================================
+工作目录: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main
+
+[1/4] 修复 setup.py / pyproject.toml 中的 Python 版本约束...
+  无需修改
+
+[2/4] 扫描 Python 源文件...
+  找到 1051 个 Python 文件
+
+[3/4] 修复 Python 3.9+ 语法和 API...
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\fix_py38_c.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpewvh3poi.py", line 925
+    {**macros_py_readonly = re.findall(r'^#\s*define\s+(Py_READONLY, **Py_AUDIT_READ})\b', content, re.MULTILINE)
+                          ^
+SyntaxError: invalid syntax
+
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\fix_py38_python.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmph4s9szj0.py", line 177
+    {**if lines[j].startswith(indent) and (stripped.startswith(", **"}) or stripped.startswith("(")):
+       ^
+SyntaxError: invalid syntax
+
+  [ERROR] .spin\cmds.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\asv_pip_nopep517.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_alloc_cache.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_app.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_array_coercion.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_clip.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_core.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_creation.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_function_base.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_import.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_indexing.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_io.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_itemselection.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_lib.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_linalg.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_ma.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_manipulate.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_ndindex.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_overrides.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_polynomial.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_random.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_records.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_reduce.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_scalar.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_searchsorted.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_shape_base.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_strings.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\bench_trim_zeros.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\benchmarks\benchmarks\bench_ufunc.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmp7qj0cypl.py, line 373)
+  [ERROR] benchmarks\benchmarks\bench_ufunc_strides.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\common.py: module 'ast' has no attribute 'Match'
+  [ERROR] benchmarks\benchmarks\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\conftest.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\postprocess.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\preprocess.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\neps\conf.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\neps\nep-0016-benchmark.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\neps\tools\build_index.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\doc\source\conf.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmphdjrm3_n.py", line 456
+    {**{**'test($, **_})', '(some, **all})true', 'bitwise_not', 'cumproduct', 'pkgload', 'generic\\.'
+                                               ^
+SyntaxError: invalid syntax
+
+  [ERROR] doc\source\f2py\code\setup_skbuild.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\source\reference\random\performance.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\source\user\conftest.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\source\user\plots\matplotlib1.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\source\user\plots\matplotlib2.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\source\user\plots\matplotlib3.py: module 'ast' has no attribute 'Match'
+  [ERROR] doc\source\user\plots\meshgrid_plot.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\conftest.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\dtypes.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\exceptions.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\matlib.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_array_api_info.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_configtool.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_distributor_init.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_expired_attrs_2_0.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_globals.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_pytesttester.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\char\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\arrayprint.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\defchararray.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\einsumfunc.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\fromnumeric.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\function_base.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\getlimits.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\multiarray.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\numeric.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\numerictypes.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\overrides.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\records.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\shape_base.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\umath.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\_dtype.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\_dtype_ctypes.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\_internal.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\_multiarray_umath.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\_utils.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\core\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ctypeslib\_ctypeslib.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ctypeslib\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\doc\ufuncs.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\auxfuncs.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\capi_maps.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\cb_rules.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\cfuncs.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\common_rules.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\f2py\crackfortran.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmppxa71wy6.py", line 381
+    {**r'\s*include\s*(\', **"})(?P<name>[^\'"]*{**)(\', **"})', re.I)
+                                                                     ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '{'
+
+  [ERROR] numpy\f2py\diagnose.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\f2py\f2py2e.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpzd0ugv_6.py", line 630
+    {**r'--((no-|)(wrap-{**functions, **lower|freethreading}-{**compatible, **latex}-doc), **debug}-{**capi, **quiet|skip}-empty-wrappers)|-include')
+                                                                                                                                                    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '{'
+
+  [ERROR] numpy\f2py\f90mod_rules.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\func2subr.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\f2py\rules.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmp6ril8dx3.py", line 458
+    }, {
+     ^
+SyntaxError: invalid syntax
+
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\f2py\symbolic.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpd8wrjctl.py", line 1188
+    {**new_s = re.sub(r'({kind}_|)({single_quoted}, **{double_quoted}})'.format(
+             ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\f2py\use_rules.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\_isocbind.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\f2py\_src_pyf.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpzrn1hbfc.py", line 51
+    {**{**routine_start_re = re.compile(r'(\n, **\A})((     (\$, **\}*))|)\s*(subroutine|function)\b', re.I)
+                           ^
+SyntaxError: invalid syntax
+
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\f2py\__init__.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpn9af12i1.py, line 80)
+  [ERROR] numpy\f2py\__main__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\__version__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_abstract_interface.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\f2py\tests\test_array_from_pyobj.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmph61kqpuy.py, line 213)
+  [ERROR] numpy\f2py\tests\test_assumed_shape.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_block_docstring.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_callback.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_capi_maps.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\f2py\tests\test_character.py - syntax error after fix, reverting:   File "<fstring>", line 1
+    (**'a', **|)
+     ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\f2py\tests\test_common.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_crackfortran.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_data.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_docs.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_f2cmap.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_f2py2e.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_inplace.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_isoc.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_kind.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_mixed.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_modules.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_parameter.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_pyf_src.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_quoted_character.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_regression.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_return_character.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_return_complex.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_return_integer.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_return_logical.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_return_real.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_routines.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_semicolon_split.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_size.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_string.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_symbolic.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\test_value_attrspec.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\util.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\f2py\_backends\_backend.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\f2py\_backends\_meson.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpnil3ke_s.py", line 236
+    {**flag_pattern = re.compile(r"--f(77, **90})flags=(.*)")
+                    ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\f2py\_backends\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\fft\_helper.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\fft\_pocketfft.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\fft\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\fft\tests\test_helper.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\fft\tests\test_pocketfft.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\fft\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\array_utils.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\format.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\introspect.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\mixins.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\npyio.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\recfunctions.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\scimath.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\stride_tricks.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\user_array.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_arraypad_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_arraysetops_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_arrayterator_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_array_utils_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_datasource.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_format_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_function_base_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_histograms_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_index_tricks_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_iotools.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_nanfunctions_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_npyio_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_polynomial_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_scimath_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_shape_base_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_stride_tricks_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_twodim_base_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_type_check_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_ufunclike_impl.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\_user_array_impl.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\lib\_utils_impl.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpt2nt7jm0.py", line 232
+    {**if endian in [', **'}, '=']:
+       ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\lib\_version.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_arraypad.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_arraysetops.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_arrayterator.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_array_utils.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_format.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_function_base.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_histograms.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_index_tricks.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\lib\tests\test_io.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpaeembb54.py", line 1116
+    dt = {'names': ('a', 'b', {**'c'), 'formats': (', **S1'}, '<i4', '<f4')}
+                                    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '{'
+
+  [ERROR] numpy\lib\tests\test_loadtxt.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_mixins.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_nanfunctions.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_packbits.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_polynomial.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_recfunctions.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_regression.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_shape_base.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_stride_tricks.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_twodim_base.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_type_check.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_ufunclike.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test_utils.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\test__datasource.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\lib\tests\test__iotools.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpqqw_faj5.py", line 348
+    {**{**assert_equal(dt_flat, [np.dtype(', **S1'}), np.dtype(', **S2'}), int])
+                                                  ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('
+
+  [ERROR] numpy\lib\tests\test__version.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\lib\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\linalg\_linalg.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\linalg\__init__.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\linalg\lapack_lite\clapack_scrub.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpnllrhwrh.py", line 79
+    {**{**keep_ftnlen = (Str('ilaenv_'), **Str('iparmq_')}, **Str('s_rnge')}) + Str('(')
+                      ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\linalg\lapack_lite\fortran.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\linalg\lapack_lite\make_lite.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpiqtdbmng.py, line 289)
+  [ERROR] numpy\linalg\tests\test_deprecations.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\linalg\tests\test_linalg.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\linalg\tests\test_regression.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\linalg\tests\__init__.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\ma\core.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpzhdrpcpr.py, line 3193)
+  [ERROR] numpy\ma\extras.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ma\mrecords.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ma\testutils.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ma\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ma\tests\test_arrayobject.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ma\tests\test_core.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ma\tests\test_deprecations.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\ma\tests\test_extras.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmp650623o9.py", line 194
+    {**{**a[(a < 3), **(a > 8)}, **(a == 5)}] = masked
+                     ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\ma\tests\test_mrecords.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ma\tests\test_old_ma.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ma\tests\test_regression.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ma\tests\test_subclassing.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\ma\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\matrixlib\defmatrix.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\matrixlib\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\matrixlib\tests\test_defmatrix.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\matrixlib\tests\test_interaction.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\matrixlib\tests\test_masked_matrix.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\matrixlib\tests\test_matrix_linalg.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\matrixlib\tests\test_multiarray.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\matrixlib\tests\test_numeric.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\matrixlib\tests\test_regression.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\matrixlib\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\chebyshev.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\hermite.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\hermite_e.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\laguerre.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\legendre.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\polynomial.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\polyutils.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\_polybase.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\tests\test_chebyshev.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\tests\test_classes.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\tests\test_hermite.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\tests\test_hermite_e.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\tests\test_laguerre.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\tests\test_legendre.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\tests\test_polynomial.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\tests\test_polyutils.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\tests\test_printing.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\tests\test_symbol.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\polynomial\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\_pickle.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\test_direct.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\test_extending.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\test_generator_mt19937.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\test_generator_mt19937_regressions.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\test_random.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\test_randomstate.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\test_randomstate_regression.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\test_regression.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\test_seed_sequence.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\test_smoke.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\tests\data\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\_examples\cffi\extending.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\_examples\cffi\parse.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\_examples\numba\extending.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\random\_examples\numba\extending_distributions.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\rec\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\strings\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\testing\overrides.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\testing\print_coercion_tables.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\testing\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\testing\tests\test_utils.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\testing\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\testing\_private\extbuild.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\testing\_private\utils.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmp5tvn27lr.py", line 2816
+    as tpe):
+    ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\testing\_private\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\test_configtool.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\test_ctypeslib.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\test_lazyloading.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\test_matlib.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\test_numpy_config.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\test_numpy_version.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\test_public_api.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\test_reloading.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\test_scripts.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\test_warnings.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\test__all__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\test_isfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\test_runtime.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\test_typing.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\arithmetic.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\arrayprint.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\arrayterator.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\array_constructors.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\array_like.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\bitwise_ops.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\comparisons.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\dtype.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\einsumfunc.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\flatiter.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\fromnumeric.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\index_tricks.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\lib_user_array.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\lib_utils.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\lib_version.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\typing\tests\data\pass\literal.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpt_w18cuc.py", line 20
+    {**order_list: list[tuple[frozenset[str, **None}], Callable[..., Any]]] = [
+                 ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\typing\tests\data\pass\ma.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\mod.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\modules.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\multiarray.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\ndarray_conversion.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\ndarray_misc.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\ndarray_shape_manipulation.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\nditer.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\numeric.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\numerictypes.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\random.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\typing\tests\data\pass\recfunctions.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpslyvmz1z.py, line 22)
+  [ERROR] numpy\typing\tests\data\pass\scalars.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\shape.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\simple.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\ufunclike.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\ufuncs.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\ufunc_config.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\typing\tests\data\pass\warnings_and_errors.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_build_utils\conv_template.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpmfapga6q.py", line 265
+    {**include_src_re = re.compile(r"(\n, **\A})#include\s*['\"]"
+                      ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\_build_utils\gcc_build_bitness.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_build_utils\gitversion.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_build_utils\process_src_template.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_build_utils\tempita.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_build_utils\tempita\_looper.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_build_utils\tempita\_tempita.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpji7m7dsb.py, line 257)
+  [ERROR] numpy\_build_utils\tempita\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\arrayprint.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\cversions.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\defchararray.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\einsumfunc.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\fromnumeric.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\function_base.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\getlimits.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\memmap.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\multiarray.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\numeric.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\numerictypes.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\overrides.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\printoptions.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\records.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\shape_base.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\strings.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\umath.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\_add_newdocs.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\_add_newdocs_scalars.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\_asarray.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\_dtype.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\_dtype_ctypes.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\_exceptions.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_core\_internal.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpj9kkhe3o.py", line 189
+    {**if order in (', **'}, '=', _nbo):
+       ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\_core\_methods.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\_string_helpers.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\_type_aliases.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\_ufunc_config.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\code_generators\genapi.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\code_generators\generate_numpy_api.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\code_generators\generate_ufunc_api.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\code_generators\generate_umath.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\code_generators\generate_umath_doc.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\code_generators\numpy_api.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\code_generators\ufunc_docstrings.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\code_generators\verify_c_api_version.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\code_generators\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\src\common\pythoncapi-compat\runtests.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_core\src\common\pythoncapi-compat\upgrade_pythoncapi.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpje6i7or_.py", line 368
+    SETREF_VALUE = fr'{OPT_CAST_REGEX}(?:{**{EXPR_REGEX}, **Py_X?NewRef\({EXPR_REGEX}\)})'
+                   ^
+SyntaxError: f-string expression part cannot include a backslash
+
+  [ERROR] numpy\_core\src\common\pythoncapi-compat\docs\conf.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\src\common\pythoncapi-compat\tests\setup.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\src\common\pythoncapi-compat\tests\test_pythoncapi_compat.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\src\common\pythoncapi-compat\tests\test_upgrade_pythoncapi.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\src\common\pythoncapi-compat\tests\utils.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\src\common\pythoncapi-compat\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\src\highway\docs\conf.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\src\highway\docs\mm-converter.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\src\npysort\x86-simd-sort\run-bench.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_abc.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_api.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_argparse.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_arraymethod.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_arrayobject.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_arrayprint.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_array_api_info.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_array_coercion.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_array_interface.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_casting_floatingpoint_errors.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_casting_unittests.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_conversion_utils.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_cpu_dispatcher.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_core\tests\test_cpu_features.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpg1cutfyp.py", line 343
+    {**is_x86 = re.match(r"^(amd64, **x86|i386|i686})", machine, re.IGNORECASE)
+              ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\_core\tests\test_custom_dtypes.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_cython.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_datetime.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_core\tests\test_defchararray.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpe04b8ozr.py", line 19
+    )
+    ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '{' on line 18
+
+  [ERROR] numpy\_core\tests\test_deprecations.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_dlpack.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_dtype.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_einsum.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_errstate.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_extint128.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_finfo.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_function_base.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_getlimits.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_half.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_hashtable.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_indexerrors.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_indexing.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_item_selection.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_limited_api.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_longdouble.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_memmap.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_mem_overlap.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_mem_policy.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_core\tests\test_multiarray.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpz7vfzprq.py, line 275)
+  [ERROR] numpy\_core\tests\test_multiprocessing.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_multithreading.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_nditer.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_nep50_promotions.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_core\tests\test_numeric.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpewojf8bx.py", line 719
+    {**assert_((t, **t}) is t)
+                   ^
+SyntaxError: invalid syntax
+
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_core\tests\test_numerictypes.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpbnmabvv6.py, line 83)
+  [ERROR] numpy\_core\tests\test_overrides.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_print.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_protocols.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_records.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_regression.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_scalarbuffer.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_scalarinherit.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_scalarmath.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_scalarprint.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_scalar_ctors.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_scalar_methods.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_shape_base.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_core\tests\test_simd.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmp1s_v6_wh.py", line 164
+    {**data_or = [a, **b} for a, b in zip(data_a, data_b)]
+               ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\_core\tests\test_simd_module.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_core\tests\test_stringdtype.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpthbfa6xh.py, line 1725)
+  [ERROR] numpy\_core\tests\test_strings.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_core\tests\test_ufunc.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpzblxgbm5.py", line 377
+    {**assert_equal(flags, (self.size_inferred, **self.can_ignore},
+                                                ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\_core\tests\test_umath.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\numpy\_core\tests\test_umath_accuracy.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpd9d8dn80.py", line 61
+    {**dtype=(', **S39'}, {**', **S39'}, {**', **S39'}, int),
+            ^
+SyntaxError: invalid syntax
+
+  [ERROR] numpy\_core\tests\test_umath_complex.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test_unicode.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\test__exceptions.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\_locales.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\_natype.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\examples\cython\setup.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_core\tests\examples\limited_api\setup.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_pyinstaller\hook-numpy.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_pyinstaller\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_pyinstaller\tests\pyinstaller-smoke.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_pyinstaller\tests\test_pyinstaller.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_pyinstaller\tests\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\_add_docstring.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\_array_like.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\_char_codes.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\_dtype_like.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\_extended_precision.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\_nbit.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\_nbit_base.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\_nested_sequence.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\_scalars.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\_shape.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\_ufunc.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_typing\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_utils\_conversions.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_utils\_inspect.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_utils\_pep440.py: module 'ast' has no attribute 'Match'
+  [ERROR] numpy\_utils\__init__.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\tools\changelog.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpc9ayi4e8.py", line 100
+    {**issues = re.findall(r'^.*\((\#, **gh}-|gh-\#)(\d+)\)$', commits, re.M)
+              ^
+SyntaxError: invalid syntax
+
+  [ERROR] tools\check_installed_files.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\check_openblas_version.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\check_python_h_first.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\functions_missing_types.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\get_submodule_paths.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\linter.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\pyright_completeness.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\refguide_check.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\write_release.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\ci\check_c_api_usage.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\ci\push_docs_to_repo.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\ci\test_all_newsfragments_used.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\tools\c_coverage\c_coverage_report.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpsoift3lv.py", line 121
+    ]
+    ^
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '{' on line 120
+
+  [ERROR] tools\swig\test\setup.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\swig\test\testArray.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\swig\test\testFarray.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\swig\test\testFlat.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\swig\test\testFortran.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\swig\test\testMatrix.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\swig\test\testSuperTensor.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\swig\test\testTensor.py: module 'ast' has no attribute 'Match'
+  [ERROR] tools\swig\test\testVector.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\meson.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\run_cross_test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\run_format_tests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\run_meson_command_tests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\run_mypy.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\run_project_tests.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpchubcm7h.py", line 498
+    {**expected_line = re.sub(r'/(?=.*(WARNING, **ERROR|DEPRECATION}))', sub, expected_line)
+                     ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\run_shell_checks.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\run_single_test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\run_tests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\run_unittests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\setup.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\skip_ci.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\ci\ciimage\build.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpcev1j21t.py", line 87
+    {**out_file.chmod(mode, **stat.S_IEXEC})
+                                          ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('
+
+  [ERROR] vendored-meson\meson\docs\genrefman.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\genrelnotes.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\jsonvalidator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\validatelinks.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\extensions\refman_links.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\generatorbase.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\generatorjson.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\generatorman.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\docs\refman\generatormd.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpxmbzdl_t.py", line 151
+    {**return len(re.sub(r'\[\[(#, **@})*([^\[])', r'\2', s))
+       ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\docs\refman\generatorpickle.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\generatorprint.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\generatorvim.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\jsonschema.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\loaderbase.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\loaderpickle.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\loaderyaml.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\main.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\model.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\docs\refman\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\manual tests\13 builddir upgrade\mod.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\manual tests\4 standalone binaries\build_windows_package.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\arglist.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpekh7me4x.py", line 90
+    {**dedup1_regex = re.compile(r'([\/\\], **\A})lib.*\.so(\.[0-9]+)?(\.[0-9]+)?(\.[0-9]+)?$')
+                    ^
+SyntaxError: invalid syntax
+
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\build.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpn8lcjn7e.py", line 68
+    lang_arg_kwargs.update({)
+                            ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '{'
+
+  [ERROR] vendored-meson\meson\mesonbuild\coredata.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\depfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\envconfig.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\environment.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\machinefile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\mcompile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\mconf.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\mdevenv.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\mdist.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\mesondata.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\mesonlib.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\mesonmain.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\mformat.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\minit.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\minstall.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\mintro.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\mlog.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\mparser.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmp0kgoz9g3.py", line 119
+    ('id', IDENT_RE),
+                    ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\mesonbuild\msetup.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\msubprojects.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\mtest.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\munstable_coredata.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\optinterpreter.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\options.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpo60l7gs3.py", line 1131
+    dirty.update(not) opt.yielding and bool(opt.parent)
+                    ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\mesonbuild\programs.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\rewriter.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\_pathlib.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\_typing.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\ast\interpreter.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\ast\introspection.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\ast\postprocess.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\ast\printer.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\ast\visitor.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\ast\__init__.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\backend\backends.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpbjv_lnw5.py", line 1498
+    self, target: build.CustomTarget, absolute_outputs: bool = False) -> \
+{**T.Tuple[T.List[str], T.List[str], T.List[str, **programs.ExternalProgram}]]:
+                                         ^
+SyntaxError: invalid syntax
+
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\backend\ninjabackend.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpgk0du7be.py", line 212
+    {**self.var_refs = [m for m in re.finditer(r'(\${\w+}, **\$\w}+)?[^$]*', self.command_str)
+                     ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\mesonbuild\backend\nonebackend.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\backend\vs2010backend.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmph88j4xhc.py, line 95)
+  [ERROR] vendored-meson\meson\mesonbuild\backend\vs2012backend.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\backend\vs2013backend.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\backend\vs2015backend.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\backend\vs2017backend.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\backend\vs2019backend.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\backend\vs2022backend.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\backend\xcodebackend.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\backend\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cargo\builder.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cargo\cfg.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cargo\interpreter.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cargo\manifest.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cargo\raw.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cargo\toml.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cargo\version.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cargo\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cmake\common.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\cmake\executor.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpql8ovydx.py", line 117
+    {**cmvers = re.search(r'(cmake, **cmake3})\s*version\s*([\d.]+)', out)
+              ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\mesonbuild\cmake\fileapi.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cmake\generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cmake\interpreter.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cmake\toolchain.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\cmake\traceparser.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmp3n2syepv.py, line 719)
+  [ERROR] vendored-meson\meson\mesonbuild\cmake\tracetargets.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cmake\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\cmake\data\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\asm.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\c.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\compilers.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\cpp.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\cs.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\cuda.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\cython.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\c_function_attributes.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\d.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\compilers\detect.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpq_a6k6tv.py", line 511
+    {**{**match = re.search(r'.*(x86, **x64|ARM|ARM64})([^_A-Za-z0-9], **$})', cl_signature)
+                ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\fortran.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\java.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\objc.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\objcpp.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\rust.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\swift.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\vala.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\apple.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\arm.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\ccrx.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\clang.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\compilers\mixins\clike.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpcojl67pp.py, line 1317)
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\compcert.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\elbrus.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\emscripten.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\gnu.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\intel.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\islinker.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\metrowerks.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\pgi.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\tasking.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\ti.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\visualstudio.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\xc16.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\compilers\mixins\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\base.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\blas_lapack.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\boost.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\cmake.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\coarrays.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\configtool.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\cuda.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\detect.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\dependencies\dev.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmp8b0b2aqi.py", line 351
+    {**re_name = re.compile(fr'{expected_name}.(so, **dll|dylib})$')
+               ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\dub.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\factory.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\framework.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\hdf5.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\misc.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\mpi.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\pkgconfig.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\platform.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\python.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\qt.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\scalapack.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\ui.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\dependencies\data\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\compiler.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\dependencyfallbacks.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\interpreter\interpreter.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmp2d9pl2te.py", line 1144
+    f'"configuration_data": initial value dictionary key "{k!r}"" must be "str | {**int, **bool"}, not "{v!r}"')
+    ^
+SyntaxError: f-string: unterminated string
+
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\interpreterobjects.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\kwargs.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\mesonmain.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\interpreter\type_checking.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpcwolnrwn.py, line 669)
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\primitives\array.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\primitives\boolean.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\primitives\dict.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\primitives\integer.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\primitives\range.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\primitives\string.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreter\primitives\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreterbase\baseobjects.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\interpreterbase\decorators.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpqxxgtmo6.py, line 457)
+  [ERROR] vendored-meson\meson\mesonbuild\interpreterbase\disabler.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreterbase\exceptions.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreterbase\helpers.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreterbase\interpreterbase.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreterbase\operator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreterbase\_unholder.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\interpreterbase\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\linkers\base.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\linkers\detect.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpt4tllzk8.py", line 99
+    {**match = re.search(r'.*(X86, **X64|ARM|ARM64}).*', out)
+             ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\mesonbuild\linkers\linkers.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\linkers\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\cmake.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\cuda.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\dlang.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\external_project.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\fs.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\gnome.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\hotdoc.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\i18n.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\icestorm.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\java.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\keyval.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\modtest.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\pkgconfig.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\modules\python.py - syntax error after fix, reverting: Sorry: IndentationError: unexpected unindent (tmp5po4qjjk.py, line 256)
+  [ERROR] vendored-meson\meson\mesonbuild\modules\python3.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\qt4.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\qt5.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\qt6.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\rust.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\simd.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\sourceset.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\wayland.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\windows.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\modules\_qt.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmp7iypytpq.py", line 797
+    {**import_re = re.compile(r'^(' + _MODULE_NAME_RE + r')(/((\d+(\.\d+)?), **auto}))?$')
+                 ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\mesonbuild\modules\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\features\feature.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\features\module.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\features\utils.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\modules\features\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\clangformat.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\clangtidy.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\cleantrees.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\clippy.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\cmake_run_ctgt.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\copy.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\coverage.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\delwithsuffix.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\depaccumulate.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\depfixer.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\depscan.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\dirchanger.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\env2mfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\externalproject.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\gettext.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\gtkdochelper.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\hotdochelper.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\itstool.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\meson_exe.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\msgfmthelper.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\pycompile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\python_info.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\regen_checker.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\reprotest.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\run_tool.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\rustdoc.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\scanbuild.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\symbolextractor.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\tags.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\test_loaded_modules.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\uninstall.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\vcstagger.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\yasm.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\scripts\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\cpptemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\cstemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\ctemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\cudatemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\dlangtemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\fortrantemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\javatemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\mesontemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\objcpptemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\objctemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\rusttemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\samplefactory.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\sampleimpl.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\valatemplates.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\templates\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\utils\core.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\utils\platform.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\utils\posix.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\mesonbuild\utils\universal.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpiybjnooy.py", line 836
+    {**_VERSION_TOK_RE = re.compile(r'(\d+), **([a-zA-Z]+)'})
+                       ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\mesonbuild\utils\vsenv.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\utils\win32.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\utils\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\wrap\wrap.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\wrap\wraptool.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\mesonbuild\wrap\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\packaging\builddist.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\packaging\createmsi.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\packaging\createpkg.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\packaging\create_zipapp.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\packaging\hook-mesonbuild.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\packaging\mpackage.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\cmake\11 cmake_module_path\subprojects\cmMod\gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\100 postconf with args\postconf.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\105 generatorcustom\catter.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\105 generatorcustom\gen-resx.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\105 generatorcustom\gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\109 custom target capture\my_compiler.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\110 allgenerate\converter.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\121 object only target\obj_generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\123 custom target directory install\docgen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\125 configure file in generator\src\gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\126 generated llvm ir\copyfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\127 generated assembly\copyfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\128 build by default targets in tests\write_file.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\129 build by default\checkexists.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\129 build by default\mygen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\13 pch\generated\gen_custom.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\13 pch\generated\gen_generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\130 include order\ctsub\copyfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\135 custom target object output\obj_generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\139 mesonintrospect from scripts\check_env.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\139 mesonintrospect from scripts\check_introspection.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\14 configure file\basename.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\14 configure file\check_file.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\14 configure file\check_inputs.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\14 configure file\file_contains.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\14 configure file\generator-deps.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\14 configure file\generator-without-input-file.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\14 configure file\generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\14 configure file\touch.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\140 custom target multiple outputs\generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\141 special characters\check_quoting.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\143 list of file sources\gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\144 link depends custom target\make_file.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\150 reserved targets\runtarget\echo.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\152 index customtarget\check_args.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\152 index customtarget\gen_sources.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\157 custom target subdir depend files\copyfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\160 custom target template substitution\checkcopy.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\168 preserve gendir\genprog.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\169 source in dep\generated\genheader.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\170 generator link whole\generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\178 bothlibraries\dummy.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\179 escape and unicode\file.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\179 escape and unicode\find.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\182 find override\broken.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\182 find override\prog-version.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\182 find override\subdir\converter.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\182 find override\subprojects\sub2\prog-version.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\186 test depends\gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\186 test depends\test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\195 generator in subdir\com\mesonbuild\tooldir\genprog.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\202 custom target build by default\docgen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\208 link custom\custom_stlib.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\208 link custom\custom_target.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\209 link custom_i single from multiple\generate_conflicting_stlibs.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\210 link custom_i multiple from multiple\generate_stlibs.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\214 source set custom target\cp.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\216 custom target input extracted objects\check_object.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\216 custom target input extracted objects\libdir\gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\217 test priorities\testprog.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\22 object extraction\check-obj.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\22 object extraction\create-source.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\226 link depends indexed custom target\check_arch.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\226 link depends indexed custom target\make_file.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\227 very long command line\codegen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\227 very long command line\name_gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\228 custom_target source\x.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\242 custom target feed\my_compiler.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\245 custom target index source\copyfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\245 custom target index source\copyfile2.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\252 install data structured\pysrc\bad.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\252 install data structured\pysrc\bar.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\252 install data structured\pysrc\foo.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\252 install data structured\pysrc\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\252 install data structured\pysrc\submod\bad.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\252 install data structured\pysrc\submod\baz.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\252 install data structured\pysrc\submod\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\26 find program\print-version-custom-argument.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\26 find program\print-version-with-prefix.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\26 find program\print-version.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\26 find program\scripts\test_subdir.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\262 generator chain\stage1.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\262 generator chain\stage2.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\269 configure file output format\compare.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\271 env in generator.process\generate_main.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\274 customtarget exe for test\generate.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\275 environment\testenv.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\279 pkgconfig override\subprojects\pkg-config\bin\pkg-config.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\33 run program\check-env.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\33 run program\get-version.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\41 test args\copyfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\41 test args\pathtester.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\41 test args\tester.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\41 test args\wrap.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\49 custom target\my_compiler.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\49 custom target\depfile\dep.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\50 custom target chain\my_compiler.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\50 custom target chain\my_compiler2.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\50 custom target chain\usetarget\subcomp.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\51 run target\check-env.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\51 run target\check_exists.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\51 run target\converter.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\51 run target\fakeburner.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\51 run target\subdir\textprinter.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\52 object generator\obj_generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\53 install script\customtarget.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\53 install script\myinstall.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\53 install script\src\myinstall.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\54 custom target source output\generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\57 custom header generator\makeheader.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\58 multiple generators\mygen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\65 build always\version_gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\66 vcstag\version.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\69 configure file in custom target\src\mycompiler.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\70 external test program\mytest.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\71 ctarget dependency\gen1.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\71 ctarget dependency\gen2.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\8 install\gendir.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\83 identical target name in subproject\true.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\83 identical target name in subproject\subprojects\foo\true.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\86 private include\stlib\compiler.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\88 dep fallback\gensrc.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\88 dep fallback\subprojects\boblib\genbob.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\90 gen extra\srcgen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\90 gen extra\srcgen2.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\90 gen extra\srcgen3.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\92 test workdir\subdir\checker.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\95 manygen\subdir\manygen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\97 find program path\program.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\common\99 postconf\postconf.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\cython\1 basic\cytest.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\cython\2 generated sources\gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\cython\2 generated sources\generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\cython\2 generated sources\test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\cython\2 generated sources\libdir\gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\cython\3 cython_args\test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\d\3 shared library\lld-test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\failing\40 custom target plainname many inputs\catfiles.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\failing\41 custom target outputs not matching install_dirs\generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\failing\66 dual override\overrides.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\failing\67 override used\other.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\failing\67 override used\something.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\failing\68 run_command unclean exit\returncode.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\failing\89 custom target install data\preproc.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\failing build\4 failed pickled\false.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\format\5 transform\file_compare.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\fortran\7 generated\gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\frameworks\1 boost\test_python_module.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\frameworks\10 gtk-doc\include\generate-enums-docbook.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\frameworks\11 gir subproject\gir\prog.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\frameworks\4 qt\subfolder\generator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\frameworks\6 gettext\data3\verify.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\frameworks\6 gettext\generated\desktopgenerator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\frameworks\7 gnome\copyfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\frameworks\7 gnome\gir\copy.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\frameworks\7 gnome\gir\prog.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\frameworks\7 gnome\resources\resources.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\linuxlike\14 static dynamic linkage\verify_static.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\linuxlike\3 linker script\copy.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\native\3 pipeline\depends\copyrunner.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\native\5 install script\wrap.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\osx\2 library versions\require_pkgconfig.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\1 basic\prog.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\1 basic\gluon\gluonator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\1 basic\gluon\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\1 basic\subdir\subprog.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\11 script path\run.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\2 extmodule\subinst\printer.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\2 extmodule\subinst\submod\printer.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\3 cython\cytest.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\4 custom target depends extmodule\blaster.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\5 modules kwarg\a.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\7 install path\test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\7 install path\structured\one.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\7 install path\structured\two.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\7 install path\structured\alpha\one.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\7 install path\structured\alpha\three.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\7 install path\structured\alpha\two.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\7 install path\structured\beta\one.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\8 different python versions\blaster.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python\9 extmodule limited api\test_limited.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python3\1 basic\prog.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python3\1 basic\gluon\gluonator.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python3\1 basic\gluon\__init__.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python3\1 basic\subdir\subprog.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python3\2 extmodule\blaster.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python3\3 cython\cytest.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\python3\4 custom target depends extmodule\blaster.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\rust\11 generated main\gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\rust\12 bindgen\gen\gen_header.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\rust\16 internal c dependencies\test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\rust\19 structured sources\gen.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\rust\19 structured sources\no_copy_test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\rust\5 polyglot static\overflow_size_checks.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\100 relative find program\foo.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\106 underspecified mtest\runner.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\107 subproject symlink\cp.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\11 cross prog\sometool.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\11 cross prog\some_cross_tool.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\111 replace unencodable xml chars\script.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\124 interactive tap\script.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\127 test slice\test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\15 prebuilt object\cp.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\2 testsetups\envcheck.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\26 install umask\myinstall.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\35 dist script\replacer.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\35 dist script\subprojects\sub\dist-script.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\35 dist script\subprojects\sub\version-test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\39 external, internal library rpath\built library\foo.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\45 native dep pkgconfig var\cross_pkgconfig.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\48 testsetup default\envcheck.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\5 compiler detection\compiler wrapper.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\56 introspection\cp.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\58 introspect buildoptions\c_compiler.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\60 identity cross\build_wrapper.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\60 identity cross\host_wrapper.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\67 test env value\test.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\70 cross test passed\exewrapper.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\70 cross test passed\script.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\90 devenv\test-devenv.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\94 custominc\easytogrepfor\genh.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\98 install all targets\script.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\unit\98 install all targets\subdir\script.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\vala\10 mixed sources\c\writec.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\vala\7 shared library\lib\source.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\vala\8 generated sources\src\copy_file.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\vala\8 generated sources\src\write_wrapper.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\windows\10 vs module defs generated custom target\subdir\make_def.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\windows\12 resources with custom targets\res\gen-res.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\windows\13 test argument extra paths\test\test_run_exe.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\windows\14 resources with custom target depend_files\ico\gen-ico.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\windows\16 gui app\gui_app_tester.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\windows\20 vs install static lib with generated obj deps\copyfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\windows\7 dll versioning\copyfile.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\test cases\windows\8 find program\test-script-ext.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\tools\ac_converter.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\tools\boost_names.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\tools\build_website.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\tools\cmake2meson.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmp4qnj8cww.py", line 30
+    ('varexp', re.compile(r'\${[-_0-9a-z/A-Z.]+}')),
+                                                   ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\tools\copy_files.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\tools\dircondenser.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\tools\regenerate_docs.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmpen1mv0u9.py, line 129)
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\unittests\allplatformstests.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmp89ag906_.py", line 2959
+    self.assertRegex(out, {**r"foo\, **.}*WARNING: Project targets '>=0.40'.*'0.44.0': disabler")
+                                                                                                ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '{'
+
+  [ERROR] vendored-meson\meson\unittests\baseplatformtests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\cargotests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\darwintests.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\unittests\datatests.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmp33cadeau.py", line 127
+    rows = re.finditer(r"^{**\, **(?: (\w+) .* | *-+ *)\|"}, subcontent, re.MULTILINE)
+                                                          ^
+SyntaxError: closing parenthesis '}' does not match opening parenthesis '('
+
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\unittests\failuretests.py - syntax error after fix, reverting:   File "<fstring>", line 1
+    (**compiler, **{self.dnf})
+     ^
+SyntaxError: invalid syntax
+
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\unittests\featurestests.py - syntax error after fix, reverting:   File "C:\Users\LANFAN~1\AppData\Local\Temp\tmpu67c3l5i.py", line 276
+    ['arch=1*2*3*4*5*xx'],
+                         ^
+SyntaxError: invalid syntax
+
+  [ERROR] vendored-meson\meson\unittests\helpers.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\internaltests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\linuxcrosstests.py: module 'ast' has no attribute 'Match'
+  WARNING: E:\AI_FUWANGGEZHANG\numpy-main\numpy-main\vendored-meson\meson\unittests\linuxliketests.py - syntax error after fix, reverting: Sorry: IndentationError: expected an indented block (tmp51qco6_s.py, line 1336)
+  [ERROR] vendored-meson\meson\unittests\machinefiletests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\optiontests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\platformagnostictests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\pythontests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\rewritetests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\subprojectscommandtests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\taptests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\windowstests.py: module 'ast' has no attribute 'Match'
+  [ERROR] vendored-meson\meson\unittests\__init__.py: module 'ast' has no attribute 'Match'
+  已修改 0 个文件
+
+[4/4] 最终验证...
+  [OK] str.removeprefix/removesuffix: 已全部修复
+  [OK] functools.cache: 已全部修复
+  [OK] isinstance(x, A|B): 已全部修复
+  [OK] issubclass(x, A|B): 已全部修复
+  [OK] import importlib.metadata (未修复): 已全部修复
+  [OK] from typing import TypeAlias (未修复): 已全部修复
+  [OK] from typing import TypeGuard (未修复): 已全部修复
+  [OK] from typing import ParamSpec (未修复): 已全部修复
+  [OK] from typing import Concatenate (未修复): 已全部修复
+  [OK] from typing import Annotated (未修复): 已全部修复
+  [OK] import zoneinfo (未修复): 已全部修复
+  [OK] import graphlib (未修复): 已全部修复
+  [OK] PEP 695 type 语句 (3.12+): 已全部修复
+  [OK] PEP 695 泛型类语法 (3.12+): 已全部修复
+  [!] PEP 634 match/case (3.10+): 仍有 4 处残留
+  [!] PEP 634 case 语句 (3.10+): 仍有 42 处残留
+  [OK] typing.NotRequired (3.11+) 未兼容: 已全部修复
+  [OK] collections.abc.Buffer (3.12+) 未兼容: 已全部修复
+  [OK] math.lcm (3.9+) 未修复: 已全部修复
+  [OK] math.nextafter (3.9+) 未修复: 已全部修复
+  [OK] math.ulp (3.9+) 未修复: 已全部修复
+  [OK] ast.unparse (3.9+) 未修复: 已全部修复
+  [OK] random.randbytes (3.9+) 未修复: 已全部修复
+  [OK] collections.XXX → collections.abc.XXX (3.9+) 未修复: 已全部修复
+
+部分特性仍有残留，请人工检查上述标记的文件。
+
+提示: 对于 C/C++ 源码中的 Python C API 兼容性问题，
+      请运行 fix_py38_c.py 脚本。
