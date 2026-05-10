@@ -827,7 +827,7 @@ def fix_invalid(a, mask=nomask, copy=True, fill_value=None):
     invalid = np.logical_not(np.isfinite(a._data))
     if not invalid.any():
         return a
-    a._mask.update(invalid)
+    a._mask |= invalid
     if fill_value is None:
         fill_value = a.fill_value
     a._data[invalid] = fill_value
@@ -994,8 +994,8 @@ class _MaskedUnaryOperation(_MaskedUFunc):
                 result = self.f(d, *args, **kwargs)
             # Make a mask
             m = ~umath.isfinite(result)
-            m.update(self.domain(d))
-            m.update(getmask(a))
+            m |= self.domain(d)
+            m |= getmask(a)
         else:
             # Case 1.2. : Function without a domain
             # Get the result and the mask
@@ -1215,12 +1215,12 @@ class _DomainedBinaryOperation(_MaskedUFunc):
             result = self.f(da, db, *args, **kwargs)
         # Get the mask as a combination of the source masks and invalid
         m = ~umath.isfinite(result)
-        m.update(getmask(a))
-        m.update(getmask(b))
+        m |= getmask(a)
+        m |= getmask(b)
         # Apply the domain
         domain = ufunc_domain.get(self.f, None)
         if domain is not None:
-            m.update(domain(da, db))
+            m |= domain(da, db)
         # Take care of the scalar case first
         if not m.ndim:
             if m:
@@ -3003,7 +3003,7 @@ class MaskedArray(ndarray):
                             if af.dtype.names is not None:
                                 _recursive_or(af, bf)
                             else:
-                                af.update(bf)
+                                af |= bf
 
                     _recursive_or(_data._mask, mask)
                 else:
@@ -3531,7 +3531,7 @@ class MaskedArray(ndarray):
             # No named fields.
             # Hardmask: don't unmask the data
             if self._hardmask:
-                current_mask.update(mask)
+                current_mask |= mask
             # Softmask: set everything to False
             # If it's obviously a compatible scalar, use a quick update
             # method.
@@ -4467,7 +4467,7 @@ class MaskedArray(ndarray):
             (_, fval) = ufunc_fills[np.floor_divide]
             other_data = np.where(
                     dom_mask, other_data.dtype.type(fval), other_data)
-        self._mask.update(new_mask)
+        self._mask |= new_mask
         other_data = np.where(self._mask, other_data.dtype.type(1), other_data)
         self._data.__ifloordiv__(other_data)
         return self
@@ -4486,7 +4486,7 @@ class MaskedArray(ndarray):
             (_, fval) = ufunc_fills[np.true_divide]
             other_data = np.where(
                     dom_mask, other_data.dtype.type(fval), other_data)
-        self._mask.update(new_mask)
+        self._mask |= new_mask
         other_data = np.where(self._mask, other_data.dtype.type(1), other_data)
         self._data.__itruediv__(other_data)
         return self
@@ -4504,7 +4504,7 @@ class MaskedArray(ndarray):
         invalid = np.logical_not(np.isfinite(self._data))
         if invalid.any():
             if self._mask is not nomask:
-                self._mask.update(invalid)
+                self._mask |= invalid
             else:
                 self._mask = invalid
             np.copyto(self._data, self.fill_value, where=invalid)
@@ -6251,7 +6251,7 @@ class MaskedArray(ndarray):
                 outmask = maskindices
             else:
                 outmask = _mask.take(indices, axis=axis, mode=mode)
-                outmask.update(maskindices)
+                outmask |= maskindices
             out.__setmask__(outmask)
         # demote 0d arrays back to scalars, for consistency with ndarray.take
         return out[()]
@@ -7584,7 +7584,7 @@ def putmask(a, mask, values):  # , mode='raise'):
         if valmask is not nomask:
             m = a._mask.copy()
             np.copyto(m, valmask, where=mask)
-            a.mask.update(m)
+            a.mask |= m
     else:
         if valmask is nomask:
             valmask = getmaskarray(values)
@@ -8206,7 +8206,7 @@ def _mask_propagate(a, axis):
     a._mask = a._mask.copy()
     axes = normalize_axis_tuple(axis, a.ndim)
     for ax in axes:
-        a._mask.update(m.any(axis=ax, keepdims=True))
+        a._mask |= m.any(axis=ax, keepdims=True)
     return a
 
 

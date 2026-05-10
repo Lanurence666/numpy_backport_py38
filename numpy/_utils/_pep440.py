@@ -256,7 +256,7 @@ VERSION_PATTERN = r"""
         (?P<release>[0-9]+(?:\.[0-9]+)*)                  # release segment
         (?P<pre>                                          # pre-release
             [-_\.]?
-{**(?P<pre_l>(a, **{**b, **{**c, **{**rc, **{**alpha, **{**beta, **{**pre, **preview}}}}}}}))
+            (?P<pre_l>(a|b|c|rc|alpha|beta|pre|preview))
             [-_\.]?
             (?P<pre_n>[0-9]+)?
         )?
@@ -265,7 +265,7 @@ VERSION_PATTERN = r"""
             |
             (?:
                 [-_\.]?
-                (?P<post_l>{**post, **{**rev, **r}})
+                (?P<post_l>post|rev|r)
                 [-_\.]?
                 (?P<post_n2>[0-9]+)?
             )
