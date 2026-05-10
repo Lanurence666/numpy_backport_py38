@@ -757,13 +757,12 @@ else:
                 "corresponding NumPy scalar.", FutureWarning, stacklevel=2)
 
         if attr in __former_attrs__:
-            raise AttributeError(__former_attrs__[attr], name=None)
+            raise AttributeError(__former_attrs__[attr])
 
         if attr in __expired_attributes__:
             raise AttributeError(
                 f"`np.{attr}` was removed in the NumPy 2.0 release. "
-                f"{__expired_attributes__[attr]}",
-                name=None
+                f"{__expired_attributes__[attr]}"
             )
 
         raise AttributeError(f"module {__name__!r} has no attribute {attr!r}")

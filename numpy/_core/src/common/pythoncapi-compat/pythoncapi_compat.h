@@ -114,6 +114,8 @@ extern "C" {
 
 #if PY_VERSION_HEX < 0x030A00A3 && !defined(Py_NewRef)
 
+#ifndef _PYCAPI_COMPAT__Py_NewRef
+#define _PYCAPI_COMPAT__Py_NewRef
 static inline PyObject* _Py_NewRef(PyObject *obj)
 
 {
@@ -123,6 +125,7 @@ static inline PyObject* _Py_NewRef(PyObject *obj)
     return obj;
 
 }
+#endif /* _PYCAPI_COMPAT__Py_NewRef */
 
 #define Py_NewRef(obj) _Py_NewRef(_PyObject_CAST(obj))
 
@@ -136,6 +139,8 @@ static inline PyObject* _Py_NewRef(PyObject *obj)
 
 #if PY_VERSION_HEX < 0x030A00A3 && !defined(Py_XNewRef)
 
+#ifndef _PYCAPI_COMPAT__Py_XNewRef
+#define _PYCAPI_COMPAT__Py_XNewRef
 static inline PyObject* _Py_XNewRef(PyObject *obj)
 
 {
@@ -145,6 +150,7 @@ static inline PyObject* _Py_XNewRef(PyObject *obj)
     return obj;
 
 }
+#endif /* _PYCAPI_COMPAT__Py_XNewRef */
 
 #define Py_XNewRef(obj) _Py_XNewRef(_PyObject_CAST(obj))
 
@@ -158,6 +164,8 @@ static inline PyObject* _Py_XNewRef(PyObject *obj)
 
 #if PY_VERSION_HEX < 0x030900A4 && !defined(Py_SET_REFCNT)
 
+#ifndef _PYCAPI_COMPAT__Py_SET_REFCNT
+#define _PYCAPI_COMPAT__Py_SET_REFCNT
 static inline void _Py_SET_REFCNT(PyObject *ob, Py_ssize_t refcnt)
 
 {
@@ -165,6 +173,7 @@ static inline void _Py_SET_REFCNT(PyObject *ob, Py_ssize_t refcnt)
     ob->ob_refcnt = refcnt;
 
 }
+#endif /* _PYCAPI_COMPAT__Py_SET_REFCNT */
 
 #define Py_SET_REFCNT(ob, refcnt) _Py_SET_REFCNT(_PyObject_CAST(ob), refcnt)
 
@@ -240,6 +249,8 @@ static inline void _Py_SET_REFCNT(PyObject *ob, Py_ssize_t refcnt)
 
 #if PY_VERSION_HEX < 0x030900A4 && !defined(Py_SET_TYPE)
 
+#ifndef _PYCAPI_COMPAT__Py_SET_TYPE
+#define _PYCAPI_COMPAT__Py_SET_TYPE
 static inline void _Py_SET_TYPE(PyObject *ob, PyTypeObject *type)
 
 {
@@ -247,6 +258,7 @@ static inline void _Py_SET_TYPE(PyObject *ob, PyTypeObject *type)
     ob->ob_type = type;
 
 }
+#endif /* _PYCAPI_COMPAT__Py_SET_TYPE */
 
 #define Py_SET_TYPE(ob, type) _Py_SET_TYPE(_PyObject_CAST(ob), type)
 
@@ -260,6 +272,8 @@ static inline void _Py_SET_TYPE(PyObject *ob, PyTypeObject *type)
 
 #if PY_VERSION_HEX < 0x030900A4 && !defined(Py_SET_SIZE)
 
+#ifndef _PYCAPI_COMPAT__Py_SET_SIZE
+#define _PYCAPI_COMPAT__Py_SET_SIZE
 static inline void _Py_SET_SIZE(PyVarObject *ob, Py_ssize_t size)
 
 {
@@ -267,6 +281,7 @@ static inline void _Py_SET_SIZE(PyVarObject *ob, Py_ssize_t size)
     ob->ob_size = size;
 
 }
+#endif /* _PYCAPI_COMPAT__Py_SET_SIZE */
 
 #define Py_SET_SIZE(ob, size) _Py_SET_SIZE((PyVarObject*)(ob), size)
 
@@ -280,6 +295,8 @@ static inline void _Py_SET_SIZE(PyVarObject *ob, Py_ssize_t size)
 
 #if PY_VERSION_HEX < 0x030900B1 || defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyFrame_GetCode
+#define _PYCAPI_COMPAT_PyFrame_GetCode
 static inline PyCodeObject* PyFrame_GetCode(PyFrameObject *frame)
 
 {
@@ -291,11 +308,14 @@ static inline PyCodeObject* PyFrame_GetCode(PyFrameObject *frame)
     return _Py_CAST(PyCodeObject*, Py_NewRef(frame->f_code));
 
 }
+#endif /* _PYCAPI_COMPAT_PyFrame_GetCode */
 
 #endif
 
 
 
+#ifndef _PYCAPI_COMPAT__PyFrame_GetCodeBorrow
+#define _PYCAPI_COMPAT__PyFrame_GetCodeBorrow
 static inline PyCodeObject* _PyFrame_GetCodeBorrow(PyFrameObject *frame)
 
 {
@@ -307,15 +327,14 @@ static inline PyCodeObject* _PyFrame_GetCodeBorrow(PyFrameObject *frame)
     return code;
 
 }
-
-
-
-
+#endif /* _PYCAPI_COMPAT__PyFrame_GetCodeBorrow */
 
 // bpo-40421 added PyFrame_GetBack() to Python 3.9.0b1
 
 #if PY_VERSION_HEX < 0x030900B1 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyFrame_GetBack
+#define _PYCAPI_COMPAT_PyFrame_GetBack
 static inline PyFrameObject* PyFrame_GetBack(PyFrameObject *frame)
 
 {
@@ -325,6 +344,7 @@ static inline PyFrameObject* PyFrame_GetBack(PyFrameObject *frame)
     return _Py_CAST(PyFrameObject*, Py_XNewRef(frame->f_back));
 
 }
+#endif /* _PYCAPI_COMPAT_PyFrame_GetBack */
 
 #endif
 
@@ -332,6 +352,8 @@ static inline PyFrameObject* PyFrame_GetBack(PyFrameObject *frame)
 
 #if !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT__PyFrame_GetBackBorrow
+#define _PYCAPI_COMPAT__PyFrame_GetBackBorrow
 static inline PyFrameObject* _PyFrame_GetBackBorrow(PyFrameObject *frame)
 
 {
@@ -343,6 +365,7 @@ static inline PyFrameObject* _PyFrame_GetBackBorrow(PyFrameObject *frame)
     return back;
 
 }
+#endif /* _PYCAPI_COMPAT__PyFrame_GetBackBorrow */
 
 #endif
 
@@ -354,6 +377,8 @@ static inline PyFrameObject* _PyFrame_GetBackBorrow(PyFrameObject *frame)
 
 #if PY_VERSION_HEX < 0x030B00A7 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyFrame_GetLocals
+#define _PYCAPI_COMPAT_PyFrame_GetLocals
 static inline PyObject* PyFrame_GetLocals(PyFrameObject *frame)
 
 {
@@ -375,6 +400,7 @@ static inline PyObject* PyFrame_GetLocals(PyFrameObject *frame)
     return Py_NewRef(frame->f_locals);
 
 }
+#endif /* _PYCAPI_COMPAT_PyFrame_GetLocals */
 
 #endif
 
@@ -386,6 +412,8 @@ static inline PyObject* PyFrame_GetLocals(PyFrameObject *frame)
 
 #if PY_VERSION_HEX < 0x030B00A7 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyFrame_GetGlobals
+#define _PYCAPI_COMPAT_PyFrame_GetGlobals
 static inline PyObject* PyFrame_GetGlobals(PyFrameObject *frame)
 
 {
@@ -393,6 +421,7 @@ static inline PyObject* PyFrame_GetGlobals(PyFrameObject *frame)
     return Py_NewRef(frame->f_globals);
 
 }
+#endif /* _PYCAPI_COMPAT_PyFrame_GetGlobals */
 
 #endif
 
@@ -404,6 +433,8 @@ static inline PyObject* PyFrame_GetGlobals(PyFrameObject *frame)
 
 #if PY_VERSION_HEX < 0x030B00A7 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyFrame_GetBuiltins
+#define _PYCAPI_COMPAT_PyFrame_GetBuiltins
 static inline PyObject* PyFrame_GetBuiltins(PyFrameObject *frame)
 
 {
@@ -411,6 +442,7 @@ static inline PyObject* PyFrame_GetBuiltins(PyFrameObject *frame)
     return Py_NewRef(frame->f_builtins);
 
 }
+#endif /* _PYCAPI_COMPAT_PyFrame_GetBuiltins */
 
 #endif
 
@@ -422,6 +454,8 @@ static inline PyObject* PyFrame_GetBuiltins(PyFrameObject *frame)
 
 #if PY_VERSION_HEX < 0x030B00B1 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyFrame_GetLasti
+#define _PYCAPI_COMPAT_PyFrame_GetLasti
 static inline int PyFrame_GetLasti(PyFrameObject *frame)
 
 {
@@ -449,6 +483,7 @@ static inline int PyFrame_GetLasti(PyFrameObject *frame)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_PyFrame_GetLasti */
 
 #endif
 
@@ -460,6 +495,8 @@ static inline int PyFrame_GetLasti(PyFrameObject *frame)
 
 #if PY_VERSION_HEX < 0x030C00A2 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyFrame_GetVar
+#define _PYCAPI_COMPAT_PyFrame_GetVar
 static inline PyObject* PyFrame_GetVar(PyFrameObject *frame, PyObject *name)
 
 {
@@ -515,6 +552,7 @@ static inline PyObject* PyFrame_GetVar(PyFrameObject *frame, PyObject *name)
     return Py_NewRef(value);
 
 }
+#endif /* _PYCAPI_COMPAT_PyFrame_GetVar */
 
 #endif
 
@@ -590,6 +628,8 @@ PyThreadState_GetInterpreter(PyThreadState *tstate)
 
 #if PY_VERSION_HEX < 0x030900B1 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyThreadState_GetFrame
+#define _PYCAPI_COMPAT_PyThreadState_GetFrame
 static inline PyFrameObject* PyThreadState_GetFrame(PyThreadState *tstate)
 
 {
@@ -599,6 +639,7 @@ static inline PyFrameObject* PyThreadState_GetFrame(PyThreadState *tstate)
     return _Py_CAST(PyFrameObject *, Py_XNewRef(tstate->frame));
 
 }
+#endif /* _PYCAPI_COMPAT_PyThreadState_GetFrame */
 
 #endif
 
@@ -630,6 +671,8 @@ _PyThreadState_GetFrameBorrow(PyThreadState *tstate)
 
 #if PY_VERSION_HEX < 0x030900A5 || defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyInterpreterState_Get
+#define _PYCAPI_COMPAT_PyInterpreterState_Get
 static inline PyInterpreterState* PyInterpreterState_Get(void)
 
 {
@@ -659,6 +702,7 @@ static inline PyInterpreterState* PyInterpreterState_Get(void)
     return interp;
 
 }
+#endif /* _PYCAPI_COMPAT_PyInterpreterState_Get */
 
 #endif
 
@@ -670,6 +714,8 @@ static inline PyInterpreterState* PyInterpreterState_Get(void)
 
 #if 0x030700A1 <= PY_VERSION_HEX && PY_VERSION_HEX < 0x030900A6 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyThreadState_GetID
+#define _PYCAPI_COMPAT_PyThreadState_GetID
 static inline uint64_t PyThreadState_GetID(PyThreadState *tstate)
 
 {
@@ -679,6 +725,7 @@ static inline uint64_t PyThreadState_GetID(PyThreadState *tstate)
     return tstate->id;
 
 }
+#endif /* _PYCAPI_COMPAT_PyThreadState_GetID */
 
 #endif
 
@@ -688,6 +735,8 @@ static inline uint64_t PyThreadState_GetID(PyThreadState *tstate)
 
 #if PY_VERSION_HEX < 0x030B00A2 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyThreadState_EnterTracing
+#define _PYCAPI_COMPAT_PyThreadState_EnterTracing
 static inline void PyThreadState_EnterTracing(PyThreadState *tstate)
 
 {
@@ -705,6 +754,7 @@ static inline void PyThreadState_EnterTracing(PyThreadState *tstate)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_PyThreadState_EnterTracing */
 
 #endif
 
@@ -714,6 +764,8 @@ static inline void PyThreadState_EnterTracing(PyThreadState *tstate)
 
 #if PY_VERSION_HEX < 0x030B00A2 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyThreadState_LeaveTracing
+#define _PYCAPI_COMPAT_PyThreadState_LeaveTracing
 static inline void PyThreadState_LeaveTracing(PyThreadState *tstate)
 
 {
@@ -735,6 +787,7 @@ static inline void PyThreadState_LeaveTracing(PyThreadState *tstate)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_PyThreadState_LeaveTracing */
 
 #endif
 
@@ -748,6 +801,8 @@ static inline void PyThreadState_LeaveTracing(PyThreadState *tstate)
 
 #if !defined(PyObject_CallNoArgs) && PY_VERSION_HEX < 0x030900A1
 
+#ifndef _PYCAPI_COMPAT_PyObject_CallNoArgs
+#define _PYCAPI_COMPAT_PyObject_CallNoArgs
 static inline PyObject* PyObject_CallNoArgs(PyObject *func)
 
 {
@@ -755,6 +810,7 @@ static inline PyObject* PyObject_CallNoArgs(PyObject *func)
     return PyObject_CallFunctionObjArgs(func, NULL);
 
 }
+#endif /* _PYCAPI_COMPAT_PyObject_CallNoArgs */
 
 #endif
 
@@ -770,6 +826,8 @@ static inline PyObject* PyObject_CallNoArgs(PyObject *func)
 
 #if !defined(PyObject_CallOneArg) && PY_VERSION_HEX < 0x030900A4
 
+#ifndef _PYCAPI_COMPAT_PyObject_CallOneArg
+#define _PYCAPI_COMPAT_PyObject_CallOneArg
 static inline PyObject* PyObject_CallOneArg(PyObject *func, PyObject *arg)
 
 {
@@ -777,6 +835,7 @@ static inline PyObject* PyObject_CallOneArg(PyObject *func, PyObject *arg)
     return PyObject_CallFunctionObjArgs(func, arg, NULL);
 
 }
+#endif /* _PYCAPI_COMPAT_PyObject_CallOneArg */
 
 #endif
 
@@ -838,6 +897,8 @@ PyModule_AddObjectRef(PyObject *module, const char *name, PyObject *value)
 
 #if PY_VERSION_HEX < 0x030900A5
 
+#ifndef _PYCAPI_COMPAT_PyModule_AddType
+#define _PYCAPI_COMPAT_PyModule_AddType
 static inline int PyModule_AddType(PyObject *module, PyTypeObject *type)
 
 {
@@ -873,6 +934,7 @@ static inline int PyModule_AddType(PyObject *module, PyTypeObject *type)
     return PyModule_AddObjectRef(module, name, _PyObject_CAST(type));
 
 }
+#endif /* _PYCAPI_COMPAT_PyModule_AddType */
 
 #endif
 
@@ -886,6 +948,8 @@ static inline int PyModule_AddType(PyObject *module, PyTypeObject *type)
 
 #if PY_VERSION_HEX < 0x030900A6 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyObject_GC_IsTracked
+#define _PYCAPI_COMPAT_PyObject_GC_IsTracked
 static inline int PyObject_GC_IsTracked(PyObject* obj)
 
 {
@@ -893,6 +957,7 @@ static inline int PyObject_GC_IsTracked(PyObject* obj)
     return (PyObject_IS_GC(obj) && _PyObject_GC_IS_TRACKED(obj));
 
 }
+#endif /* _PYCAPI_COMPAT_PyObject_GC_IsTracked */
 
 #endif
 
@@ -904,6 +969,8 @@ static inline int PyObject_GC_IsTracked(PyObject* obj)
 
 #if PY_VERSION_HEX < 0x030900A6 && PY_VERSION_HEX >= 0x030400F0 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyObject_GC_IsFinalized
+#define _PYCAPI_COMPAT_PyObject_GC_IsFinalized
 static inline int PyObject_GC_IsFinalized(PyObject *obj)
 
 {
@@ -913,6 +980,7 @@ static inline int PyObject_GC_IsFinalized(PyObject *obj)
     return (PyObject_IS_GC(obj) && _PyGCHead_FINALIZED(gc));
 
 }
+#endif /* _PYCAPI_COMPAT_PyObject_GC_IsFinalized */
 
 #endif
 
@@ -924,6 +992,8 @@ static inline int PyObject_GC_IsFinalized(PyObject *obj)
 
 #if PY_VERSION_HEX < 0x030900A4 && !defined(Py_IS_TYPE)
 
+#ifndef _PYCAPI_COMPAT__Py_IS_TYPE
+#define _PYCAPI_COMPAT__Py_IS_TYPE
 static inline int _Py_IS_TYPE(PyObject *ob, PyTypeObject *type) {
 
     return Py_TYPE(ob) == type;
@@ -951,12 +1021,14 @@ static inline int _Py_IS_TYPE(PyObject *ob, PyTypeObject *type) {
 static inline int PyFloat_Pack2(double x, char *p, int le)
 
 { return _PyFloat_Pack2(x, (unsigned char*)p, le); }
+#endif /* _PYCAPI_COMPAT__Py_IS_TYPE */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyFloat_Unpack2
+#define _PYCAPI_COMPAT_PyFloat_Unpack2
 static inline double PyFloat_Unpack2(const char *p, int le)
 
 { return _PyFloat_Unpack2((const unsigned char *)p, le); }
+#endif /* _PYCAPI_COMPAT_PyFloat_Unpack2 */
 
 #endif
 
@@ -976,27 +1048,33 @@ static inline double PyFloat_Unpack2(const char *p, int le)
 
 #if PY_VERSION_HEX <= 0x030B00A1 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyFloat_Pack4
+#define _PYCAPI_COMPAT_PyFloat_Pack4
 static inline int PyFloat_Pack4(double x, char *p, int le)
 
 { return _PyFloat_Pack4(x, (unsigned char*)p, le); }
+#endif /* _PYCAPI_COMPAT_PyFloat_Pack4 */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyFloat_Pack8
+#define _PYCAPI_COMPAT_PyFloat_Pack8
 static inline int PyFloat_Pack8(double x, char *p, int le)
 
 { return _PyFloat_Pack8(x, (unsigned char*)p, le); }
+#endif /* _PYCAPI_COMPAT_PyFloat_Pack8 */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyFloat_Unpack4
+#define _PYCAPI_COMPAT_PyFloat_Unpack4
 static inline double PyFloat_Unpack4(const char *p, int le)
 
 { return _PyFloat_Unpack4((const unsigned char *)p, le); }
+#endif /* _PYCAPI_COMPAT_PyFloat_Unpack4 */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyFloat_Unpack8
+#define _PYCAPI_COMPAT_PyFloat_Unpack8
 static inline double PyFloat_Unpack8(const char *p, int le)
 
 { return _PyFloat_Unpack8((const unsigned char *)p, le); }
+#endif /* _PYCAPI_COMPAT_PyFloat_Unpack8 */
 
 #endif
 
@@ -1008,6 +1086,8 @@ static inline double PyFloat_Unpack8(const char *p, int le)
 
 #if PY_VERSION_HEX < 0x030B00B1 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyCode_GetCode
+#define _PYCAPI_COMPAT_PyCode_GetCode
 static inline PyObject* PyCode_GetCode(PyCodeObject *code)
 
 {
@@ -1015,6 +1095,7 @@ static inline PyObject* PyCode_GetCode(PyCodeObject *code)
     return Py_NewRef(code->co_code);
 
 }
+#endif /* _PYCAPI_COMPAT_PyCode_GetCode */
 
 #endif
 
@@ -1026,6 +1107,8 @@ static inline PyObject* PyCode_GetCode(PyCodeObject *code)
 
 #if PY_VERSION_HEX < 0x030B00C1 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyCode_GetVarnames
+#define _PYCAPI_COMPAT_PyCode_GetVarnames
 static inline PyObject* PyCode_GetVarnames(PyCodeObject *code)
 
 {
@@ -1033,6 +1116,7 @@ static inline PyObject* PyCode_GetVarnames(PyCodeObject *code)
     return Py_NewRef(code->co_varnames);
 
 }
+#endif /* _PYCAPI_COMPAT_PyCode_GetVarnames */
 
 #endif
 
@@ -1042,6 +1126,8 @@ static inline PyObject* PyCode_GetVarnames(PyCodeObject *code)
 
 #if PY_VERSION_HEX < 0x030B00C1 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyCode_GetFreevars
+#define _PYCAPI_COMPAT_PyCode_GetFreevars
 static inline PyObject* PyCode_GetFreevars(PyCodeObject *code)
 
 {
@@ -1049,6 +1135,7 @@ static inline PyObject* PyCode_GetFreevars(PyCodeObject *code)
     return Py_NewRef(code->co_freevars);
 
 }
+#endif /* _PYCAPI_COMPAT_PyCode_GetFreevars */
 
 #endif
 
@@ -1058,6 +1145,8 @@ static inline PyObject* PyCode_GetFreevars(PyCodeObject *code)
 
 #if PY_VERSION_HEX < 0x030B00C1 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyCode_GetCellvars
+#define _PYCAPI_COMPAT_PyCode_GetCellvars
 static inline PyObject* PyCode_GetCellvars(PyCodeObject *code)
 
 {
@@ -1065,6 +1154,7 @@ static inline PyObject* PyCode_GetCellvars(PyCodeObject *code)
     return Py_NewRef(code->co_cellvars);
 
 }
+#endif /* _PYCAPI_COMPAT_PyCode_GetCellvars */
 
 #endif
 
@@ -1096,6 +1186,8 @@ static inline PyObject* PyCode_GetCellvars(PyCodeObject *code)
 
 #if PY_VERSION_HEX < 0x030D00A0
 
+#ifndef _PYCAPI_COMPAT_PyImport_AddModuleRef
+#define _PYCAPI_COMPAT_PyImport_AddModuleRef
 static inline PyObject* PyImport_AddModuleRef(const char *name)
 
 {
@@ -1103,6 +1195,7 @@ static inline PyObject* PyImport_AddModuleRef(const char *name)
     return Py_XNewRef(PyImport_AddModule(name));
 
 }
+#endif /* _PYCAPI_COMPAT_PyImport_AddModuleRef */
 
 #endif
 
@@ -1114,6 +1207,8 @@ static inline PyObject* PyImport_AddModuleRef(const char *name)
 
 #if PY_VERSION_HEX < 0x030D0000
 
+#ifndef _PYCAPI_COMPAT_PyWeakref_GetRef
+#define _PYCAPI_COMPAT_PyWeakref_GetRef
 static inline int PyWeakref_GetRef(PyObject *ref, PyObject **pobj)
 
 {
@@ -1155,6 +1250,7 @@ static inline int PyWeakref_GetRef(PyObject *ref, PyObject **pobj)
     return 1;
 
 }
+#endif /* _PYCAPI_COMPAT_PyWeakref_GetRef */
 
 #endif
 
@@ -1176,6 +1272,8 @@ static inline int PyWeakref_GetRef(PyObject *ref, PyObject **pobj)
 
 #if PY_VERSION_HEX < 0x030800B1
 
+#ifndef _PYCAPI_COMPAT_PyVectorcall_NARGS
+#define _PYCAPI_COMPAT_PyVectorcall_NARGS
 static inline Py_ssize_t PyVectorcall_NARGS(size_t n)
 
 {
@@ -1183,6 +1281,7 @@ static inline Py_ssize_t PyVectorcall_NARGS(size_t n)
     return n & ~PY_VECTORCALL_ARGUMENTS_OFFSET;
 
 }
+#endif /* _PYCAPI_COMPAT_PyVectorcall_NARGS */
 
 #endif
 
@@ -1717,6 +1816,8 @@ PyModule_Add(PyObject *mod, const char *name, PyObject *value)
 #if (0x030201B1 <= PY_VERSION_HEX && PY_VERSION_HEX < 0x030D00A1) \
         && (!defined(PYPY_VERSION_NUM) || PYPY_VERSION_NUM >= 0x7030000)
 
+#ifndef _PYCAPI_COMPAT_Py_IsFinalizing
+#define _PYCAPI_COMPAT_Py_IsFinalizing
 static inline int Py_IsFinalizing(void)
 
 {
@@ -1734,6 +1835,7 @@ static inline int Py_IsFinalizing(void)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_Py_IsFinalizing */
 
 #endif
 
@@ -1745,6 +1847,8 @@ static inline int Py_IsFinalizing(void)
 
 #if PY_VERSION_HEX < 0x030D00A1
 
+#ifndef _PYCAPI_COMPAT_PyDict_ContainsString
+#define _PYCAPI_COMPAT_PyDict_ContainsString
 static inline int PyDict_ContainsString(PyObject *op, const char *key)
 
 {
@@ -1764,6 +1868,7 @@ static inline int PyDict_ContainsString(PyObject *op, const char *key)
     return res;
 
 }
+#endif /* _PYCAPI_COMPAT_PyDict_ContainsString */
 
 #endif
 
@@ -1775,6 +1880,8 @@ static inline int PyDict_ContainsString(PyObject *op, const char *key)
 
 #if PY_VERSION_HEX < 0x030D00A1
 
+#ifndef _PYCAPI_COMPAT_PyLong_AsInt
+#define _PYCAPI_COMPAT_PyLong_AsInt
 static inline int PyLong_AsInt(PyObject *obj)
 
 {
@@ -1808,6 +1915,7 @@ static inline int PyLong_AsInt(PyObject *obj)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_AsInt */
 
 #endif
 
@@ -2201,6 +2309,8 @@ typedef Py_ssize_t Py_hash_t;
 
 #if PY_VERSION_HEX < 0x030D00A3
 
+#ifndef _PYCAPI_COMPAT_Py_HashPointer
+#define _PYCAPI_COMPAT_Py_HashPointer
 static inline Py_hash_t Py_HashPointer(const void *ptr)
 
 {
@@ -2216,6 +2326,7 @@ static inline Py_hash_t Py_HashPointer(const void *ptr)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_Py_HashPointer */
 
 #endif
 
@@ -2237,24 +2348,29 @@ typedef _PyTime_t PyTime_t;
 
 
 
+#ifndef _PYCAPI_COMPAT_PyTime_AsSecondsDouble
+#define _PYCAPI_COMPAT_PyTime_AsSecondsDouble
 static inline double PyTime_AsSecondsDouble(PyTime_t t)
 
 { return _PyTime_AsSecondsDouble(t); }
+#endif /* _PYCAPI_COMPAT_PyTime_AsSecondsDouble */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyTime_Monotonic
+#define _PYCAPI_COMPAT_PyTime_Monotonic
 static inline int PyTime_Monotonic(PyTime_t *result)
 
 { return _PyTime_GetMonotonicClockWithInfo(result, NULL); }
+#endif /* _PYCAPI_COMPAT_PyTime_Monotonic */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyTime_Time
+#define _PYCAPI_COMPAT_PyTime_Time
 static inline int PyTime_Time(PyTime_t *result)
 
 { return _PyTime_GetSystemClockWithInfo(result, NULL); }
+#endif /* _PYCAPI_COMPAT_PyTime_Time */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyTime_PerfCounter
+#define _PYCAPI_COMPAT_PyTime_PerfCounter
 static inline int PyTime_PerfCounter(PyTime_t *result)
 
 {
@@ -2390,8 +2506,7 @@ static inline int PyTime_PerfCounter(PyTime_t *result)
 #endif
 
 }
-
-
+#endif /* _PYCAPI_COMPAT_PyTime_PerfCounter */
 
 #endif
 
@@ -2450,6 +2565,8 @@ static inline int PyTime_PerfCounter(PyTime_t *result)
 
 
 
+#ifndef _PYCAPI_COMPAT_Py_GetConstant
+#define _PYCAPI_COMPAT_Py_GetConstant
 static inline PyObject* Py_GetConstant(unsigned int constant_id)
 
 {
@@ -2553,9 +2670,10 @@ init_done:
     }
 
 }
+#endif /* _PYCAPI_COMPAT_Py_GetConstant */
 
-
-
+#ifndef _PYCAPI_COMPAT_Py_GetConstantBorrowed
+#define _PYCAPI_COMPAT_Py_GetConstantBorrowed
 static inline PyObject* Py_GetConstantBorrowed(unsigned int constant_id)
 
 {
@@ -2567,6 +2685,7 @@ static inline PyObject* Py_GetConstantBorrowed(unsigned int constant_id)
     return obj;
 
 }
+#endif /* _PYCAPI_COMPAT_Py_GetConstantBorrowed */
 
 #endif
 
@@ -2698,6 +2817,8 @@ typedef struct PyUnicodeWriter PyUnicodeWriter;
 
 
 
+#ifndef _PYCAPI_COMPAT_PyUnicodeWriter_Discard
+#define _PYCAPI_COMPAT_PyUnicodeWriter_Discard
 static inline void PyUnicodeWriter_Discard(PyUnicodeWriter *writer)
 
 {
@@ -2707,9 +2828,10 @@ static inline void PyUnicodeWriter_Discard(PyUnicodeWriter *writer)
     PyMem_Free(writer);
 
 }
+#endif /* _PYCAPI_COMPAT_PyUnicodeWriter_Discard */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyUnicodeWriter_Create
+#define _PYCAPI_COMPAT_PyUnicodeWriter_Create
 static inline PyUnicodeWriter* PyUnicodeWriter_Create(Py_ssize_t length)
 
 {
@@ -2757,9 +2879,10 @@ static inline PyUnicodeWriter* PyUnicodeWriter_Create(Py_ssize_t length)
     return pub_writer;
 
 }
+#endif /* _PYCAPI_COMPAT_PyUnicodeWriter_Create */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyUnicodeWriter_Finish
+#define _PYCAPI_COMPAT_PyUnicodeWriter_Finish
 static inline PyObject* PyUnicodeWriter_Finish(PyUnicodeWriter *writer)
 
 {
@@ -2773,8 +2896,7 @@ static inline PyObject* PyUnicodeWriter_Finish(PyUnicodeWriter *writer)
     return str;
 
 }
-
-
+#endif /* _PYCAPI_COMPAT_PyUnicodeWriter_Finish */
 
 static inline int
 
@@ -3040,6 +3162,8 @@ PyUnicodeWriter_Format(PyUnicodeWriter *writer, const char *format, ...)
 
 #if PY_VERSION_HEX < 0x030E00A0
 
+#ifndef _PYCAPI_COMPAT_PyLong_GetSign
+#define _PYCAPI_COMPAT_PyLong_GetSign
 static inline int PyLong_GetSign(PyObject *obj, int *sign)
 
 {
@@ -3059,6 +3183,7 @@ static inline int PyLong_GetSign(PyObject *obj, int *sign)
     return 0;
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_GetSign */
 
 #endif
 
@@ -3068,6 +3193,8 @@ static inline int PyLong_GetSign(PyObject *obj, int *sign)
 
 #if PY_VERSION_HEX < 0x030E00A2
 
+#ifndef _PYCAPI_COMPAT_PyLong_IsPositive
+#define _PYCAPI_COMPAT_PyLong_IsPositive
 static inline int PyLong_IsPositive(PyObject *obj)
 
 {
@@ -3083,9 +3210,10 @@ static inline int PyLong_IsPositive(PyObject *obj)
     return _PyLong_Sign(obj) == 1;
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_IsPositive */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyLong_IsNegative
+#define _PYCAPI_COMPAT_PyLong_IsNegative
 static inline int PyLong_IsNegative(PyObject *obj)
 
 {
@@ -3101,9 +3229,10 @@ static inline int PyLong_IsNegative(PyObject *obj)
     return _PyLong_Sign(obj) == -1;
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_IsNegative */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyLong_IsZero
+#define _PYCAPI_COMPAT_PyLong_IsZero
 static inline int PyLong_IsZero(PyObject *obj)
 
 {
@@ -3119,6 +3248,7 @@ static inline int PyLong_IsZero(PyObject *obj)
     return _PyLong_Sign(obj) == 0;
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_IsZero */
 
 #endif
 
@@ -3140,6 +3270,8 @@ PyAPI_FUNC(int) _PyUnicode_Equal(PyObject *str1, PyObject *str2);
 
 
 
+#ifndef _PYCAPI_COMPAT_PyUnicode_Equal
+#define _PYCAPI_COMPAT_PyUnicode_Equal
 static inline int PyUnicode_Equal(PyObject *str1, PyObject *str2)
 
 {
@@ -3185,6 +3317,7 @@ static inline int PyUnicode_Equal(PyObject *str1, PyObject *str2)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_PyUnicode_Equal */
 
 #endif
 
@@ -3196,6 +3329,8 @@ static inline int PyUnicode_Equal(PyObject *str1, PyObject *str2)
 
 #if PY_VERSION_HEX < 0x030E00A0
 
+#ifndef _PYCAPI_COMPAT_PyBytes_Join
+#define _PYCAPI_COMPAT_PyBytes_Join
 static inline PyObject* PyBytes_Join(PyObject *sep, PyObject *iterable)
 
 {
@@ -3203,6 +3338,7 @@ static inline PyObject* PyBytes_Join(PyObject *sep, PyObject *iterable)
     return _PyBytes_Join(sep, iterable);
 
 }
+#endif /* _PYCAPI_COMPAT_PyBytes_Join */
 
 #endif
 
@@ -3222,6 +3358,8 @@ PyAPI_FUNC(Py_hash_t) _Py_HashBytes(const void *src, Py_ssize_t len);
 
 
 
+#ifndef _PYCAPI_COMPAT_Py_HashBuffer
+#define _PYCAPI_COMPAT_Py_HashBuffer
 static inline Py_hash_t Py_HashBuffer(const void *ptr, Py_ssize_t len)
 
 {
@@ -3251,6 +3389,7 @@ static inline Py_hash_t Py_HashBuffer(const void *ptr, Py_ssize_t len)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_Py_HashBuffer */
 
 #endif
 
@@ -3260,6 +3399,8 @@ static inline Py_hash_t Py_HashBuffer(const void *ptr, Py_ssize_t len)
 
 #if PY_VERSION_HEX < 0x030E00A0
 
+#ifndef _PYCAPI_COMPAT_PyIter_NextItem
+#define _PYCAPI_COMPAT_PyIter_NextItem
 static inline int PyIter_NextItem(PyObject *iter, PyObject **item)
 
 {
@@ -3313,6 +3454,7 @@ static inline int PyIter_NextItem(PyObject *iter, PyObject **item)
     return -1;
 
 }
+#endif /* _PYCAPI_COMPAT_PyIter_NextItem */
 
 #endif
 
@@ -3322,6 +3464,8 @@ static inline int PyIter_NextItem(PyObject *iter, PyObject **item)
 
 #if PY_VERSION_HEX < 0x030E00A0
 
+#ifndef _PYCAPI_COMPAT_PyLong_FromInt32
+#define _PYCAPI_COMPAT_PyLong_FromInt32
 static inline PyObject* PyLong_FromInt32(int32_t value)
 
 {
@@ -3331,9 +3475,10 @@ static inline PyObject* PyLong_FromInt32(int32_t value)
     return PyLong_FromLong(value);
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_FromInt32 */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyLong_FromInt64
+#define _PYCAPI_COMPAT_PyLong_FromInt64
 static inline PyObject* PyLong_FromInt64(int64_t value)
 
 {
@@ -3343,9 +3488,10 @@ static inline PyObject* PyLong_FromInt64(int64_t value)
     return PyLong_FromLongLong(value);
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_FromInt64 */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyLong_FromUInt32
+#define _PYCAPI_COMPAT_PyLong_FromUInt32
 static inline PyObject* PyLong_FromUInt32(uint32_t value)
 
 {
@@ -3355,9 +3501,10 @@ static inline PyObject* PyLong_FromUInt32(uint32_t value)
     return PyLong_FromUnsignedLong(value);
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_FromUInt32 */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyLong_FromUInt64
+#define _PYCAPI_COMPAT_PyLong_FromUInt64
 static inline PyObject* PyLong_FromUInt64(uint64_t value)
 
 {
@@ -3367,9 +3514,10 @@ static inline PyObject* PyLong_FromUInt64(uint64_t value)
     return PyLong_FromUnsignedLongLong(value);
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_FromUInt64 */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyLong_AsInt32
+#define _PYCAPI_COMPAT_PyLong_AsInt32
 static inline int PyLong_AsInt32(PyObject *obj, int32_t *pvalue)
 
 {
@@ -3389,9 +3537,10 @@ static inline int PyLong_AsInt32(PyObject *obj, int32_t *pvalue)
     return 0;
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_AsInt32 */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyLong_AsInt64
+#define _PYCAPI_COMPAT_PyLong_AsInt64
 static inline int PyLong_AsInt64(PyObject *obj, int64_t *pvalue)
 
 {
@@ -3411,9 +3560,10 @@ static inline int PyLong_AsInt64(PyObject *obj, int64_t *pvalue)
     return 0;
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_AsInt64 */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyLong_AsUInt32
+#define _PYCAPI_COMPAT_PyLong_AsUInt32
 static inline int PyLong_AsUInt32(PyObject *obj, uint32_t *pvalue)
 
 {
@@ -3447,9 +3597,10 @@ static inline int PyLong_AsUInt32(PyObject *obj, uint32_t *pvalue)
     return 0;
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_AsUInt32 */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyLong_AsUInt64
+#define _PYCAPI_COMPAT_PyLong_AsUInt64
 static inline int PyLong_AsUInt64(PyObject *obj, uint64_t *pvalue)
 
 {
@@ -3469,6 +3620,7 @@ static inline int PyLong_AsUInt64(PyObject *obj, uint64_t *pvalue)
     return 0;
 
 }
+#endif /* _PYCAPI_COMPAT_PyLong_AsUInt64 */
 
 #endif
 
@@ -3910,6 +4062,8 @@ PyAPI_FUNC(FILE*) _Py_fopen_obj(PyObject *path, const char *mode);
 
 
 
+#ifndef _PYCAPI_COMPAT_Py_fopen
+#define _PYCAPI_COMPAT_Py_fopen
 static inline FILE* Py_fopen(PyObject *path, const char *mode)
 
 {
@@ -3969,9 +4123,10 @@ static inline FILE* Py_fopen(PyObject *path, const char *mode)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_Py_fopen */
 
-
-
+#ifndef _PYCAPI_COMPAT_Py_fclose
+#define _PYCAPI_COMPAT_Py_fclose
 static inline int Py_fclose(FILE *file)
 
 {
@@ -3979,6 +4134,7 @@ static inline int Py_fclose(FILE *file)
     return fclose(file);
 
 }
+#endif /* _PYCAPI_COMPAT_Py_fclose */
 
 #endif
 
@@ -4434,6 +4590,8 @@ PyConfig_GetInt(const char *name, int *value)
 
 #if PY_VERSION_HEX < 0x030E00B0
 
+#ifndef _PYCAPI_COMPAT_PyUnstable_Object_IsUniquelyReferenced
+#define _PYCAPI_COMPAT_PyUnstable_Object_IsUniquelyReferenced
 static inline int PyUnstable_Object_IsUniquelyReferenced(PyObject *obj)
 
 {
@@ -4459,6 +4617,7 @@ static inline int PyUnstable_Object_IsUniquelyReferenced(PyObject *obj)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_PyUnstable_Object_IsUniquelyReferenced */
 
 #endif
 
@@ -4470,6 +4629,8 @@ static inline int PyUnstable_Object_IsUniquelyReferenced(PyObject *obj)
 
 #if PY_VERSION_HEX < 0x030E00A5
 
+#ifndef _PYCAPI_COMPAT_PyUnstable_TryIncRef
+#define _PYCAPI_COMPAT_PyUnstable_TryIncRef
 static inline int PyUnstable_TryIncRef(PyObject *op)
 
 {
@@ -4563,9 +4724,10 @@ static inline int PyUnstable_TryIncRef(PyObject *op)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_PyUnstable_TryIncRef */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyUnstable_EnableTryIncRef
+#define _PYCAPI_COMPAT_PyUnstable_EnableTryIncRef
 static inline void PyUnstable_EnableTryIncRef(PyObject *op)
 
 {
@@ -4609,6 +4771,7 @@ static inline void PyUnstable_EnableTryIncRef(PyObject *op)
 #endif
 
 }
+#endif /* _PYCAPI_COMPAT_PyUnstable_EnableTryIncRef */
 
 #endif
 
@@ -5488,6 +5651,8 @@ PyObject_VectorcallMethod(PyObject *name, PyObject *const *args,
 
 #if PY_VERSION_HEX < 0x030C00A1
 
+#ifndef _PYCAPI_COMPAT_PyErr_GetRaisedException
+#define _PYCAPI_COMPAT_PyErr_GetRaisedException
 static inline PyObject* PyErr_GetRaisedException(void)
 
 {
@@ -5505,9 +5670,10 @@ static inline PyObject* PyErr_GetRaisedException(void)
     return exc_value;
 
 }
+#endif /* _PYCAPI_COMPAT_PyErr_GetRaisedException */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyErr_SetRaisedException
+#define _PYCAPI_COMPAT_PyErr_SetRaisedException
 static inline int PyErr_SetRaisedException(PyObject *exc)
 
 {
@@ -5519,6 +5685,7 @@ static inline int PyErr_SetRaisedException(PyObject *exc)
     return 0;
 
 }
+#endif /* _PYCAPI_COMPAT_PyErr_SetRaisedException */
 
 #endif
 
@@ -5578,6 +5745,8 @@ static inline int PyErr_SetRaisedException(PyObject *exc)
 
 
 
+#ifndef _PYCAPI_COMPAT_PyType_GetSlot
+#define _PYCAPI_COMPAT_PyType_GetSlot
 static inline void* PyType_GetSlot(PyTypeObject *type, int slot)
 
 {
@@ -5665,6 +5834,7 @@ static inline void* PyType_GetSlot(PyTypeObject *type, int slot)
     return NULL;
 
 }
+#endif /* _PYCAPI_COMPAT_PyType_GetSlot */
 
 #endif
 
@@ -5674,6 +5844,8 @@ static inline void* PyType_GetSlot(PyTypeObject *type, int slot)
 
 #if PY_VERSION_HEX < 0x030900A2
 
+#ifndef _PYCAPI_COMPAT_PyType_GetModule
+#define _PYCAPI_COMPAT_PyType_GetModule
 static inline PyObject* PyType_GetModule(PyTypeObject *type)
 
 {
@@ -5739,6 +5911,7 @@ static inline PyObject* PyType_GetModule(PyTypeObject *type)
     return NULL;
 
 }
+#endif /* _PYCAPI_COMPAT_PyType_GetModule */
 
 #endif
 
@@ -5748,6 +5921,8 @@ static inline PyObject* PyType_GetModule(PyTypeObject *type)
 
 #if PY_VERSION_HEX < 0x030900A2
 
+#ifndef _PYCAPI_COMPAT_PyType_GetModuleByDef
+#define _PYCAPI_COMPAT_PyType_GetModuleByDef
 static inline PyObject* PyType_GetModuleByDef(PyTypeObject *type, PyModuleDef *def)
 
 {
@@ -5757,6 +5932,7 @@ static inline PyObject* PyType_GetModuleByDef(PyTypeObject *type, PyModuleDef *d
     return NULL;
 
 }
+#endif /* _PYCAPI_COMPAT_PyType_GetModuleByDef */
 
 #endif
 
@@ -5966,6 +6142,8 @@ typedef PyObject *(*PyCMethod)(PyObject *, PyTypeObject *, PyObject *, PyObject 
 
 #if PY_VERSION_HEX < 0x030A00A6 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyObject_GetAIter
+#define _PYCAPI_COMPAT_PyObject_GetAIter
 static inline PyObject* PyObject_GetAIter(PyObject *o)
 
 {
@@ -5973,6 +6151,7 @@ static inline PyObject* PyObject_GetAIter(PyObject *o)
     return PyObject_CallMethod(o, "__aiter__", NULL);
 
 }
+#endif /* _PYCAPI_COMPAT_PyObject_GetAIter */
 
 #endif
 
@@ -5982,6 +6161,8 @@ static inline PyObject* PyObject_GetAIter(PyObject *o)
 
 #if PY_VERSION_HEX < 0x030900A5
 
+#ifndef _PYCAPI_COMPAT_PyModule_AddFunctions
+#define _PYCAPI_COMPAT_PyModule_AddFunctions
 static inline int PyModule_AddFunctions(PyObject *module, PyMethodDef *methods)
 
 {
@@ -6015,6 +6196,7 @@ static inline int PyModule_AddFunctions(PyObject *module, PyMethodDef *methods)
     return 0;
 
 }
+#endif /* _PYCAPI_COMPAT_PyModule_AddFunctions */
 
 #endif
 
@@ -6024,6 +6206,8 @@ static inline int PyModule_AddFunctions(PyObject *module, PyMethodDef *methods)
 
 #if PY_VERSION_HEX < 0x030C00A2 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyInterpreterState_GetDict
+#define _PYCAPI_COMPAT_PyInterpreterState_GetDict
 static inline PyObject* PyInterpreterState_GetDict(PyInterpreterState *interp)
 
 {
@@ -6043,6 +6227,7 @@ static inline PyObject* PyInterpreterState_GetDict(PyInterpreterState *interp)
     return dict;
 
 }
+#endif /* _PYCAPI_COMPAT_PyInterpreterState_GetDict */
 
 #endif
 
@@ -6054,6 +6239,8 @@ static inline PyObject* PyInterpreterState_GetDict(PyInterpreterState *interp)
 
 #if PY_VERSION_HEX < 0x030B00A1 && !defined(PYPY_VERSION)
 
+#ifndef _PYCAPI_COMPAT_PyErr_GetExcInfo
+#define _PYCAPI_COMPAT_PyErr_GetExcInfo
 static inline void PyErr_GetExcInfo(PyObject **type, PyObject **value, PyObject **traceback)
 
 {
@@ -6071,9 +6258,10 @@ static inline void PyErr_GetExcInfo(PyObject **type, PyObject **value, PyObject 
     Py_XINCREF(*traceback);
 
 }
+#endif /* _PYCAPI_COMPAT_PyErr_GetExcInfo */
 
-
-
+#ifndef _PYCAPI_COMPAT_PyErr_SetExcInfo
+#define _PYCAPI_COMPAT_PyErr_SetExcInfo
 static inline void PyErr_SetExcInfo(PyObject *type, PyObject *value, PyObject *traceback)
 
 {
@@ -6081,6 +6269,7 @@ static inline void PyErr_SetExcInfo(PyObject *type, PyObject *value, PyObject *t
     PyErr_Restore(type, value, traceback);
 
 }
+#endif /* _PYCAPI_COMPAT_PyErr_SetExcInfo */
 
 #endif
 
@@ -6090,6 +6279,8 @@ static inline void PyErr_SetExcInfo(PyObject *type, PyObject *value, PyObject *t
 
 // Py_GenericAlias() - Python 3.9.0a2
 #if PY_VERSION_HEX < 0x030900A2
+#ifndef _PYCAPI_COMPAT_Py_GenericAlias
+#define _PYCAPI_COMPAT_Py_GenericAlias
 static inline PyObject* Py_GenericAlias(PyObject *cls, PyObject *args)
 {
     PyObject *mod = PyImport_ImportModule("typing");
@@ -6104,22 +6295,32 @@ static inline PyObject* Py_GenericAlias(PyObject *cls, PyObject *args)
     Py_DECREF(ga_type);
     return result;
 }
+#endif /* _PYCAPI_COMPAT_Py_GenericAlias */
+
 #endif
 
 // PyObject_CallMethodNoArgs() - Python 3.9.0a3
 #if PY_VERSION_HEX < 0x030900A3
+#ifndef _PYCAPI_COMPAT_PyObject_CallMethodNoArgs
+#define _PYCAPI_COMPAT_PyObject_CallMethodNoArgs
 static inline PyObject* PyObject_CallMethodNoArgs(PyObject *obj, PyObject *name)
 {
     return PyObject_CallMethodObjArgs(obj, name, NULL);
 }
+#endif /* _PYCAPI_COMPAT_PyObject_CallMethodNoArgs */
+
 #endif
 
 // PyObject_CallMethodOneArg() - Python 3.9.0a3
 #if PY_VERSION_HEX < 0x030900A3
+#ifndef _PYCAPI_COMPAT_PyObject_CallMethodOneArg
+#define _PYCAPI_COMPAT_PyObject_CallMethodOneArg
 static inline PyObject* PyObject_CallMethodOneArg(PyObject *obj, PyObject *name, PyObject *arg)
 {
     return PyObject_CallMethodObjArgs(obj, name, arg, NULL);
 }
+#endif /* _PYCAPI_COMPAT_PyObject_CallMethodOneArg */
+
 #endif
 #endif  // PYTHONCAPI_COMPAT
 
