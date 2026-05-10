@@ -4,12 +4,20 @@ from __future__ import annotations
 from typing import (
     Any,
     NamedTuple,
-    Self,
-    TypeAliasType,
     get_args,
     get_origin,
     get_type_hints,
 )
+
+try:
+    from typing import Self
+except ImportError:
+    from typing_extensions import Self
+
+try:
+    from typing import TypeAliasType
+except ImportError:
+    from typing_extensions import TypeAliasType
 
 import pytest
 

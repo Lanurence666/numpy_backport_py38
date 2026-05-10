@@ -31,7 +31,7 @@ class TestMRecords:
     ilist = [1, 2, 3, 4, 5]
     flist = [1.1, 2.2, 3.3, 4.4, 5.5]
     slist = [b'one', b'two', b'three', b'four', b'five']
-    ddtype = [('a', int), ('b', float), ('c', {**', **S8'})]
+    ddtype = [('a', int), ('b', float), ('c', '|S8')]
     mask = [0, 1, 0, 0, 1]
     base = ma.array(list(zip(ilist, flist, slist)), mask=mask, dtype=ddtype)
 
